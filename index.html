@@ -10,14 +10,45 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://w0z.com">
 <meta property="og:image" content="https://w0z.com/me3.jpeg">
+<style>
+    .carousel {
+        display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+    flex-wrap: nowrap;
+    }
+
+    .carousel img {
+        flex: 0 0 auto;
+    width: 260px;
+    height: auto !important;
+    max-height: none;
+    object-fit: contain;
+    scroll-snap-align: start;
+    }
+
+    @media (min-width: 768px) {
+        .carousel {
+            overflow-x: visible;
+            flex-wrap: wrap;
+        }
+    }
+</style>
 </head>
 <body>
     <h1>Web stuff</h1>
     <p>What up? I'm Will. I built and sold a few real businesses and now i mess around on the internet.</p>
 
-    <img src="me3.jpeg" alt="Will Gordon" style="max-width:260px; width:100%; height:auto; display:block;" />
-    <br>
+    <div class="carousel">
+        <img src="me3.jpeg" alt="Me">
+        <img src="me5.jpeg" alt="Me">
+        <img src="me4.jpeg" alt="Me">
+        <img src="me6.jpeg" alt="Me">
 
+    </div>
     <p>Here's some stuff i Did/doing:</p>
     <ul>
         <li><a href="https://starterbuild.com" target="_blank">StarterBuild</a></li>
